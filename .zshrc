@@ -194,6 +194,8 @@ alias up="ls && ip a | egrep \"inet[^6]\" | awk '{if (\$2 != \"127.0.0.1/8\"){ p
 alias listener='nc -lvnp'
 alias thmux='tmux new -s thm'
 alias thm='sudo openvpn ~/vpn/Wavess-thm.ovpn'
+alias htbs='sudo openvpn ~/vpn/starting-point-Wavess.ovpn'
+alias nclip='cat nmap/initial | xclip -selection clipboard'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
