@@ -112,10 +112,6 @@ alias _='sudo'
 alias _i='sudo -i'
 alias please='sudo'
 alias fucking='sudo'
-alias up="ls && ip a | egrep \"inet[^6]\" | awk '{if (\$2 != \"127.0.0.1/8\"){ print \$2; }}' | cut -d \"/\" -f 1 && sudo python3 -m http.server 80"
-alias thm="sudo openvpn ~/vpn/Wavess-thm.ovpn"
-alias thmux="tmux new -s thm"
-alias listener="nc -lvnp"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
