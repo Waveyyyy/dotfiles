@@ -196,6 +196,7 @@ alias thmux='tmux new -s thm'
 alias thm='sudo openvpn ~/vpn/Wavess-thm.ovpn'
 alias htbs='sudo openvpn ~/vpn/starting-point-Wavess.ovpn'
 alias nclip='cat nmap/initial | xclip -selection clipboard'
+alias emacs='emacs -nw'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
