@@ -1,12 +1,16 @@
 # Wavess .vimrc 
 
->> Wavess
->> 21/07/2021
+> Wavess 
+>
+> 21/07/2021
+ 
+&nbsp;
 
+Updated my vimrc, combined a lot of the stuff from other peoples vimrc's
 
-* Updated my vimrc, combined a lot of the stuff from other peoples vimrc's
+Will be adding more in the coming weeks, current list of content is as follows
 
-* Will be adding more in the coming weeks, current list of content is as follows
+&nbsp;
 
 1. Colour Scheming
     * Gruvbox Theme (what else did you expect)
