@@ -124,3 +124,17 @@
     " spell checking in markdown and text files
         autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
         autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_gb
+
+" file browsing
+    " no banner
+    let g:netrw_banner = 0
+    " open file in previous window
+    let g:netrw_browse_split = 4
+    " 25% width
+    let g:netrw_winsize = 25
+    " for quick edits, open the file in sensible places
+    let g:netrw_altv = 1
+    let g:netrw_alto = 1
+
+    " open file browser in left window using ctrl+e
+        map <silent> <C-E> :Lexplore<CR>
