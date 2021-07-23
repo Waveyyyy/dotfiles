@@ -1,11 +1,19 @@
-# _    _                                      _              
+# _    _                                      _ 
 #| |  | |                                    | |             
 #| |  | | __ ___   _____  ___ ___     _______| |__  _ __ ___ 
 #| |/\| |/ _` \ \ / / _ \/ __/ __|   |_  / __| '_ \| '__/ __|
 #\  /\  / (_| |\ V /  __/\__ \__ \  _ / /\__ \ | | | | | (__ 
 # \/  \/ \__,_| \_/ \___||___/___/ (_)___|___/_| |_|_|  \___|
-                                                            
-                                                            
+
+
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/opt/clion-2021.1.2/bin:/opt/pycharm-2021.1.2/bin
@@ -17,7 +25,7 @@ export ZSH="/home/callum/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gruvbox-custom"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 SOLARIZED_THEME="dark"
 
 # Set list of themes to pick from when loading at random
@@ -49,7 +57,7 @@ SOLARIZED_THEME="dark"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -86,13 +94,15 @@ plugins=(
     zsh-syntax-highlighting
     colored-man-pages
     gitignore
+    autojump
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
+# ZSH history settings
+setopt HIST_IGNORE_SPACE
+HISTSIZE=5000
+SAVEHIST=5000
 
 # You may need to manually set your language environment
 export LANG=en_UK.UTF-8
@@ -111,8 +121,12 @@ export LANG=en_UK.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias emacs="emacs -nw"
+alias -g xclip="xclip -selection clipboard"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
