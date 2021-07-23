@@ -124,6 +124,9 @@
     " spell checking in markdown and text files
         autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
         autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_gb
+    " save and run a python file with the f5 key
+        autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
+        autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
 " file browsing
     " no banner
