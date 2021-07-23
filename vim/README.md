@@ -2,7 +2,7 @@
 
 > Wavess 
 >
-> 21/07/2021
+> 22/07/2021
  
 &nbsp;
 
@@ -71,7 +71,8 @@ Will be adding more in the coming weeks, current list of content is as follows
 
 11. Language specific settings
     * Spellchecking for both .md and .txt extensions
-
+    * Save and run python files from within vim with 1 key press
+ 
 &nbsp;
 
 12. Filebrowsing in vim
