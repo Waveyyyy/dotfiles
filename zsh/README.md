@@ -6,6 +6,8 @@
 
 &nbsp;
 
+#### Been messing with p10k will update this readme when i get the chance
+
 Been spending a bunch of time on my laptop messing with config files recently, have only ever used bash previous to this month so decided i'd have a crack at the config file for zsh.
 
 Not much additional content in here as of, mainly plugins and theme stuff.
