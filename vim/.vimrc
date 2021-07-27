@@ -105,6 +105,8 @@
     " remove the need to press shift to enter command mode
     nnoremap ; :
     vnoremap ; :
+    " remove highlighting when done with search
+    nnoremap <esc> :noh<return><esc>
     " keep cursor in middle of the page
     nnoremap <C-U> 11kzz
     nnoremap <C-D> 11jzz
