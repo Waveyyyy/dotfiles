@@ -12,8 +12,6 @@ This script does what it says on the tin, fucks with system brightness, specific
 
 Yet again does exactly as titled, increments the brightness based off the previous brightness value
 
-**will attach screenshots when i can be arsed**
-
 2. set
 
 Another beautifully self descriptive switch, simply sets the brightness value to the one provided
@@ -37,3 +35,5 @@ To use this script without needing an absolute path each time, it should be move
 ![Example usage of set switch](https://github.com/Waveyyyy/dotfiles/new/main/.scripts/brightness/screenshots/set_example.png)
 
 ![Example usage of help switch](https://github.com/Waveyyyy/dotfiles/new/main/.scripts/brightness/screenshots/help_example.png)
+
+![Example of incorrect input](https://github.com/Waveyyyy/dotfiles/blob/0095437b37883aac77d3f01529dcbda6492c0522/.scripts/brightness/screenshots/error_example.png)
