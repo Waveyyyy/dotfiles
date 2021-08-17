@@ -30,7 +30,10 @@
     set showmatch
     " dont redraw during macros, runs them faster
     set lazyredraw
-
+    " no soundeffects
+    set noerrorbells
+    " lines continue off screen
+    set nowrap
 
 " show autocomplete menu while typing a command
     set wildmenu
@@ -43,8 +46,7 @@
 " tabs
     " always use 4 spaces as tab
     set expandtab
-    set tabstop=4
-    set softtabstop=4
+    set tabstop=4 softtabstop=4
     set shiftwidth=4
     set smarttab
     set shiftround
@@ -59,6 +61,9 @@
     set nowritebackup
     set noswapfile
 
+" replace for backups
+    set undodir=~/.vim/undodir
+    set undofile
 
 " make searching less insanity inducing
     set ignorecase
@@ -106,7 +111,7 @@
     nnoremap ; :
     vnoremap ; :
     " remove highlighting when done with search
-    nnoremap <esc> :noh<return><esc>
+    autocmd VimEnter * nnoremap <silent> <C-h> :noh<return><esc>
     " keep cursor in middle of the page
     nnoremap <C-U> 11kzz
     nnoremap <C-D> 11jzz
