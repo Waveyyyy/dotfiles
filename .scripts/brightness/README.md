@@ -2,7 +2,7 @@
 
 This script does what it says on the tin, fucks with system brightness, specifically for my current laptop.
 
-![Screenshot of code](/path/to/screenshot)
+![Screenshot of code](https://github.com/Waveyyyy/dotfiles/blob/e5ca17cf0618d3b349231448435b6584dc401eb2/.scripts/brightness/screenshots/code_screenshot.png)
 
 &nbsp;
 
@@ -30,10 +30,10 @@ To use this script without needing an absolute path each time, it should be move
 
 ## Examples
 
-![Example usage of inc switch](https://github.com/Waveyyyy/dotfiles/new/main/.scripts/brightness/screenshots/inc_example.png)
+![Example usage of inc switch](https://github.com/Waveyyyy/dotfiles/blob/0095437b37883aac77d3f01529dcbda6492c0522/.scripts/brightness/screenshots/inc_example.png)
 
-![Example usage of set switch](https://github.com/Waveyyyy/dotfiles/new/main/.scripts/brightness/screenshots/set_example.png)
+![Example usage of set switch](https://github.com/Waveyyyy/dotfiles/blob/0095437b37883aac77d3f01529dcbda6492c0522/.scripts/brightness/screenshots/set_example.png)
 
-![Example usage of help switch](https://github.com/Waveyyyy/dotfiles/new/main/.scripts/brightness/screenshots/help_example.png)
+![Example usage of help switch](https://github.com/Waveyyyy/dotfiles/blob/0095437b37883aac77d3f01529dcbda6492c0522/.scripts/brightness/screenshots/help_example.png)
 
 ![Example of incorrect input](https://github.com/Waveyyyy/dotfiles/blob/0095437b37883aac77d3f01529dcbda6492c0522/.scripts/brightness/screenshots/error_example.png)
