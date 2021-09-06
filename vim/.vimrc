@@ -7,8 +7,10 @@
                                                                  
                                                                  
 
-" colour scheme
-    syntax enable
+" colour things
+    syntax on
+    set omnifunc=syntaxcomplete#Complete
+    " colourscheme stuff
     set termguicolors
     set background=dark
     colorscheme solarized
