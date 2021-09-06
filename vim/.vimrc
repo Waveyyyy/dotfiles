@@ -101,7 +101,7 @@
 
 
 " allows for own namespace of keybinds
-    let mapleader = ","
+    let mapleader = " "
 
     
 " remap some keys for easier access
