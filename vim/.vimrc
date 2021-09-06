@@ -34,6 +34,8 @@
     set noerrorbells
     " lines continue off screen
     set nowrap
+    " no save required when switching buffers
+    set hidden
 
 " show autocomplete menu while typing a command
     set wildmenu
