@@ -149,6 +149,19 @@
     " open file browser in left window using ctrl+e
         map <silent> <C-E> :Lexplore<CR>
 
+
+" window navigation
+    nmap <C-H> <C-w>h
+    nmap <C-J> <C-w>j
+    nmap <C-K> <C-w>k
+    nmap <C-L> <C-w>l
+
+
+" buffer navigation
+    nmap <silent> <C-N> :bn<CR>
+    nmap <silent> <C-P> :bp<CR>
+
+
 " Highlight the 80th column
     if (exists('+colorcolumn'))
         set colorcolumn=80
