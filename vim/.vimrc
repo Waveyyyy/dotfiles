@@ -56,6 +56,9 @@
     set smartindent
     " tab completion for files, including subfolders
     set path+=**
+    " tabs navigation
+    nmap <silent> <Tab> :tabn<CR>
+    nmap <silent> <S-Tab> :tabp<CR>
 
 
 " no need for this bcos VCS
