@@ -148,3 +148,9 @@
 
     " open file browser in left window using ctrl+e
         map <silent> <C-E> :Lexplore<CR>
+
+" Highlight the 80th column
+    if (exists('+colorcolumn'))
+        set colorcolumn=80
+        highlight ColorColumn ctermbg=9
+    endif
