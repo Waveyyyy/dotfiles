@@ -2,7 +2,7 @@
 
 > Wavess 
 >
-> 23/07/2021
+> 06/09/2021
  
 &nbsp;
 
@@ -13,7 +13,9 @@ Will be adding more in the coming weeks, current list of content is as follows
 &nbsp;
 
 1. Colour Scheming
-    * Gruvbox Theme (what else did you expect)
+    * ~~Gruvbox Theme (what else did you expect)~~
+    * Solarized Theme (dark)
+    * set termguicolors cus solarized breaks otherwise >:(
 
 &nbsp;
 
@@ -27,13 +29,16 @@ Will be adding more in the coming weeks, current list of content is as follows
 
 &nbsp;
 
-4. Tab formatting
-    * What fucking mad person doesnt have their tabs the length of 4 spaces?
+4. Tab stuff
+    * Indentation (tab) width of 4 spaces
+    * General indentation stuff
+    * Keybinds for navigation between tabs
 
 &nbsp;
 
 5. Backup disbaling cos VCS
     * Control all the versions or something like that
+    * Undofiles to replace backups
 
 &nbsp;
 
@@ -58,7 +63,7 @@ Will be adding more in the coming weeks, current list of content is as follows
 
 9. Even more Misc stuff
     * Scrolloff
-    * Keybind own namespaces
+    * Leader key set to space (was comma but space is easier to press)
 
 &nbsp;
 
@@ -77,3 +82,10 @@ Will be adding more in the coming weeks, current list of content is as follows
 
 12. Filebrowsing in vim
     * Press CTRL-E to open a filebrowser in the left hand window
+
+13. Navigation rebinds
+    * Rebind clunky <C-w>hjkl to <C-HJKL> for navigating between windows
+    * rebind :bn and :bp for easier buffer navigation
+ 
+14. More misc stuff
+    * Highlight 80th column in red
