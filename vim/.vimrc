@@ -9,8 +9,9 @@
 
 " colour scheme
     syntax enable
-    colorscheme gruvbox
-    :set bg=dark
+    set termguicolors
+    set background=dark
+    colorscheme solarized
 
 
 " numbering
