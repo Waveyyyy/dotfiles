@@ -83,7 +83,7 @@
     set showmatch
     set hlsearch
     " always use global when substituting (add /g at end of s command to only
-    " replace first occurrence
+    " replace first occurrence)
     set gdefault
     " more sane regex for searching
     nnoremap / /\v
