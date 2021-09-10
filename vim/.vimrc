@@ -42,6 +42,8 @@
     set nowrap
     " no save required when switching buffers
     set hidden
+    " paste from external programs with p
+    set clipboard=unnamed
 
 " show autocomplete menu while typing a command
     set wildmenu
