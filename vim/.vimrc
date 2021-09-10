@@ -86,6 +86,7 @@
     " replace first occurrence)
     set gdefault
     " more sane regex for searching
+    " removes need to escape chars for regex in search
     nnoremap / /\v
     vnoremap / /\v
 
