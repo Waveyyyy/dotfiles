@@ -42,8 +42,7 @@
     set nowrap
     " no save required when switching buffers
     set hidden
-    " paste from external programs with p
-    set clipboard=unnamed
+
 
 " show autocomplete menu while typing a command
     set wildmenu
@@ -91,6 +90,7 @@
     " removes need to escape chars for regex in search
     nnoremap / /\v
     vnoremap / /\v
+
 
 " display ruler on the bottom right corner
     set ruler
@@ -141,6 +141,8 @@
     nnoremap G Gzz
     nnoremap gj gjzz
     nnoremap gk gkzz
+    " add blank lines without leaving normal mode
+    nnoremap <silent> <leader><Return> :put _<CR>
 
 
 " settings specific to languages
