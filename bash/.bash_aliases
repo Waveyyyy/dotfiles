@@ -21,6 +21,8 @@ function vpn {
 function ccompile {
     # grab the filename and strip any extension off
     # compile filename.c and give outfile the same name with no extension
-    filename=$(echo "$1" | cut -d '.' -f 1 )
+    filename=$(find . -name "*.c" | rev | cut -d '.' -f 2- | rev)
     gcc "$filename".c -o "$filename"
+
 }
+
