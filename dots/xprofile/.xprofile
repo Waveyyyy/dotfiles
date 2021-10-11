@@ -1,0 +1,28 @@
+# __          __                         __   __                 __ _ _      
+# \ \        / /                         \ \ / /                / _(_) |     
+#  \ \  /\  / /_ ___   _____  ___ ___     \ V / _ __  _ __ ___ | |_ _| | ___ 
+#   \ \/  \/ / _` \ \ / / _ \/ __/ __|     > < | '_ \| '__/ _ \|  _| | |/ _ \
+#    \  /\  / (_| |\ V /  __/\__ \__ \  _ / . \| |_) | | | (_) | | | | |  __/
+#     \/  \/ \__,_| \_/ \___||___/___/ (_)_/ \_\ .__/|_|  \___/|_| |_|_|\___|
+#                                              | |                           
+#                                              |_|                           
+#
+# Programs that i want to run at start of session
+
+# Set wallpaper
+wal -i $(cat ~/.cache/wal/wal)
+
+# Source .Xresources
+xrdb -merge ~/.Xresources
+
+# Hide cursor if typing / idle
+unclutter -grab -keystroke &
+
+# Start compositor (makes windows transparent)
+picom -b
+
+# Start the notification daemon
+dunst &
+
+# Change keyboard conf
+setxkbmap gb -model colemak
