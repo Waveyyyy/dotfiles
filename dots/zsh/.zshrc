@@ -26,6 +26,7 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
 
     # Path to your oh-my-zsh installation.
     export ZSH="/home/waves/.oh-my-zsh"
+    ZSH_THEME="robbyrussell"
 
 
     plugins=(
@@ -34,7 +35,15 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
         zsh-syntax-highlighting
         colored-man-pages
         gitignore
+        sudo
+        dirhistory
+        vi-mode
     )
+
+    # vi-mode settings
+    VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+    VI_MODE_SET_CURSOR=true
+    
 
 
     source $ZSH/oh-my-zsh.sh
@@ -43,3 +52,5 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
     test -f ~/.bash_aliases && source ~/.bash_aliases
 
 export LANG=en_US.UTF-8
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

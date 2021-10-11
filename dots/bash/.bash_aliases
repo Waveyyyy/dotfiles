@@ -5,6 +5,9 @@ alias la='exa -la'
 alias cat='bat'
 alias curl='http'
 
+# for clipboard in void
+alias vim='vim-huge'
+
 # hacking specific aliases
 alias up="exa -a && ip a | egrep \"inet[^6]\" | awk '{if (\$2 != \"127.0.0.1/8\"){ print \$2; }}' | cut -d \"/\" -f 1 && sudo python3 -m http.server 80"
 alias listener='nc -lvnp'
