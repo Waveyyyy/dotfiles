@@ -18,7 +18,7 @@ alias listener='nc -lvnp'
 function vpn {
     # search vpn file for file containing string entered
     # and run it with openvpn
-    sudo openvpn $(find ~/vpn/ -name ""$1"*")
+    sudo openvpn $(find ~/vpn/ -name "*"$1"*")
 }
 
 function ccompile {
