@@ -14,7 +14,7 @@ alias trilium='trilium >/dev/null 2>&1 &'
 # hacking specific aliases
 alias up="exa -a && ip a | egrep \"inet[^6]\" | awk '{if (\$2 != \"127.0.0.1/8\"){ print \$2; }}' | cut -d \"/\" -f 1 && sudo python3 -m http.server 80"
 alias listener='nc -lvnp'
-alias bloodhound='bloodhound --no-sandbox'
+alias bloodhound='bloodhound --no-sandbox >/dev/null 2>&1 &'
 
 
 # functions for making my life easier
