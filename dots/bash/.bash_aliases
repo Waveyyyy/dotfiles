@@ -6,7 +6,10 @@ alias cat='bat'
 alias curl='http'
 
 # for clipboard in void
-alias vim='vim-huge'
+# alias vim='vim-huge'
+
+# trilium run from terminal without spamming output (im cba remembering the full command :) )
+alias trilium="trilium >/dev/null 2>&1 &"
 
 # hacking specific aliases
 alias up="exa -a && ip a | egrep \"inet[^6]\" | awk '{if (\$2 != \"127.0.0.1/8\"){ print \$2; }}' | cut -d \"/\" -f 1 && sudo python3 -m http.server 80"
