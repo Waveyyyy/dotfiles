@@ -22,7 +22,7 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
 # OMZ stuff
 
     # If you come from bash you might have to change your $PATH.
-    export PATH=$HOME/bin:/usr/local/bin:$PATH
+    export PATH=/opt/jdk11/bin:$HOME/bin:/usr/local/bin:$PATH:/home/waves/.local/bin:/usr/bin
 
     # Path to your oh-my-zsh installation.
     export ZSH="/home/waves/.oh-my-zsh"
@@ -37,7 +37,6 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
         gitignore
         sudo
         dirhistory
-        vi-mode
     )
 
     # vi-mode settings
