@@ -40,6 +40,7 @@ new_window 1pixel
 
 # run status bar
 bar {
+    font pango:DejaVu Sans Mono 12
     # start i3blocks
     status_command i3blocks
     
@@ -76,8 +77,9 @@ default_border pixel 3
 
 # Use amixer for volume controls
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+
 
 # Open chromium
 bindsym $mod+w exec chromium
@@ -102,7 +104,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+w exec ~/dotfiles/dots/scripts/.scripts/cLayout/load_layout.sh
 
 # Bind rofi to allow for opening of programs
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec rofi -show run
+bindsym $mod+Tab exec rofi -show window
+
 
 # i3lock to lock the screen
 bindsym $mod+e exec i3lock-fancy
