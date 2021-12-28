@@ -33,14 +33,14 @@ client.background       $bg
 set $mod Mod4
 
 # Set the font
-font pango:DejaVu Sans Mono 12
+font pango:FiraCode Nerd Font Mono 14
 
 # Remove title bars
 new_window 1pixel
 
 # run status bar
 bar {
-    font pango:DejaVu Sans Mono 12
+    font pango:FiraCode Nerd Font Mono 14
     # start i3blocks
     status_command i3blocks
     
