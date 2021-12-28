@@ -9,13 +9,6 @@
 " colour things
     syntax on
     set omnifunc=syntaxcomplete#Complete
-    " colourscheme stuff
-"    set termguicolors
-"    set background=dark
-"    colorscheme solarized
-"    " color fix for tmux
-"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
 " numbering
@@ -25,10 +18,8 @@
 
 " random defaults
     set nocompatible
-    filetype off
     set encoding=utf-8
     set backspace=2
-    filetype plugin on
     " show commands as you're typing them
     set showcmd
     " jump to matching bracket briefly on insert
@@ -151,21 +142,6 @@
     " run the black linter over the file
         autocmd FileType python map <buffer> <F6> :w<CR>:exec '!python3 -m black' shellescape(@%, 1)<CR>
         autocmd FileType python imap <buffer> <F6> <esc>:w<CR>:exec '!python3 -m black' shellescape(@%, 1)<CR>
-
-
-" file browsing
-    " no banner
-    let g:netrw_banner = 0
-    " open file in previous window
-    let g:netrw_browse_split = 4
-    " 25% width
-    let g:netrw_winsize = 25
-    " for quick edits, open the file in sensible places
-    let g:netrw_altv = 1
-    let g:netrw_alto = 1
-
-    " open file browser in left window using ctrl+e
-        map <silent> <C-E> :Lexplore<CR>
 
 
 " window navigation
