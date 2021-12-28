@@ -5,6 +5,8 @@ function! DoRemote()
     UpdateRemotePlugins
 endfunction
 
+filetype off
+
 if dein#load_state('~/.config/nvim/dein')
     call dein#begin('~/.config/nvim/dein')
 endif
@@ -23,7 +25,7 @@ endif
     call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 
     " Themeing
-
+    call dein#add('phanviet/vim-monokai-pro')
 
     " Key-menu popup
     call dein#add('liuchengxu/vim-which-key')
@@ -84,3 +86,10 @@ endif
     endif
 
 call dein#end()
+
+filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+ call dein#install()
+endif
