@@ -146,4 +146,4 @@ configuration {
   }
 }
 @theme "/usr/share/rofi/themes/Monokai.rasi"
-/* @theme "~/.config/wal/colors-rofi-dark.rasi" */
+/* @theme "~/.config/wal/templates/colors-rofi-dark.rasi" */
