@@ -1,0 +1,259 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+
+[bar/mybar]
+bottom = false
+width = 100%
+height = 37
+offset-x = 0
+offset-y = 0
+radius = 6.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FiraCode Nerd Font Mono:style=Regular:pixelsize=14;3
+font-1 = Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular:pixelsize=10;1
+font-2 = Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:pixelsize=10;1
+font-3 = Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:pixelsize=1;1
+font-4 = Noto Emoji:style=Regular:scale=7;4
+font-5 = NotoEmoji Nerd Font:style=Book:scale=2;0
+font-6 = Noto Color Emoji:style=Regular:scale=2;0
+font-7 = NotoEmoji Nerd Font Mono:style=Book:scale=2;0
+; font-8 = fixed:pixelsize=10;1
+; font-9 = unifont:fontformat=truetype:size=8:antialias=false;0
+; font-10= siji:pixelsize=100;1
+
+modules-left = i3
+modules-center = date
+modules-right = cpu backlight battery pulseaudio powermenu
+
+
+; tray-position = right
+; tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+index-sort = true
+wrapping-scroll = false
+
+; workspace names
+ws-icon-0 = 1;1 
+ws-icon-1 = 2:C;C
+ws-icon-2 = 3;3 
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8:www;www
+ws-icon-8 = 9:spotify;♫
+ws-icon-9 = 10:msg;msg
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+
+[module/backlight]
+type = internal/backlight
+; backlight card (find name with `ls -l /sys/class/backlight`)
+card = amdgpu_bl0
+; enable ability to change brightness with mouse whell
+enable-scroll = true
+
+; Formatting
+; Available tags:
+;   - <label> (default)
+;   - <ramp>
+;   - <bar>
+format = <ramp> <label>
+
+label = %percentage%
+
+ramp-0 = 🌑
+ramp-1 = 🌒
+ramp-2 = 🌓
+ramp-3 = 🌔
+ramp-4 = 🌕
+
+
+[module/battery]
+type = internal/battery
+; find batteries with `ls -l /sys/class/power_supply`
+battery = BAT0
+adapter = AC0
+; if no event in x seconds manually poll for a new value
+poll-interval = 5
+; if battery doesnt report 100% charged uncomment this
+full-at = 99
+
+; Formatting:
+; charging time display in format hours:mins
+time-format = %H:%M
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
+
+label-charging = "%percentage%% %{F#05bd02}+%time%%{F-}"
+label-discharging = "%percentage%% %{F#bd8202}-%time%%{F-}"
+; %{F#05bd02}%percentage%%{F-}%
+label-full = 🔋
+
+
+[module/cpu]
+type = internal/cpu
+; How many seconds to sleep between polling
+interval = 0.5
+
+; Formatting:
+format = <label>
+
+label = CPU %percentage%%
+
+
+[module/date]
+type = internal/date
+
+; How often to poll for updates
+interval = 1.0
+date = %H:%M:%S
+date-alt = %d-%m-%Y%
+
+; Formatting:
+format = <label>
+label = %date%
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; sink to be used
+sink = alsa_output.pci-0000_03_00.6.analog-stereo
+use-ui-max = false
+; volume increase interval
+interval = 1
+
+; Formatting:
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+
+label-volume = %percentage%%
+label-muted = 🔇
+
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = ⏻
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+
+[settings]
+; if 5 update events happen at once, only listen to last one
+; prevent bar appearing sluggish have 10ms timeout
+throttle-output = 5
+throttle-output-for = 10
+
+; Restart if screen size changes (XCB_XRANDR_SCREEN_CHANGE_NOTIFY events)
+screenchange-reload = true
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
