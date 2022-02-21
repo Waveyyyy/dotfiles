@@ -101,7 +101,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # coding layout
-bindsym $mod+Shift+w exec ~/dotfiles/dots/scripts/.scripts/cLayout/load_layout.sh
+bindsym $mod+Shift+w exec ~/dotfiles/dots/scripts/.scripts/layout1/load_layout.sh
 
 # Bind rofi to allow for opening of programs
 bindsym $mod+d exec rofi -show run
