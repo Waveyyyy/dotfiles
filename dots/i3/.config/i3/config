@@ -184,5 +184,5 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Oh you wanna exit huh?' -B '
 
 
 # Launch applications on login
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id sh $HOME/.config/polybar/launch.sh
 exec nm-applet

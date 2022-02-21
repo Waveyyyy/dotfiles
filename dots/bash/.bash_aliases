@@ -10,6 +10,8 @@ alias vim='nvim'
 # trilium run from terminal without spamming output (i cba remembering the full command :) )
 alias trilium='trilium >/dev/null 2>&1 &'
 
+# set term value for ssh, stops 'unknown term type alacritty'
+alias ssh='TERM=xterm-256color ssh'
 
 # functions for making my life easier
 
