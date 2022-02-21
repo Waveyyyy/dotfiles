@@ -26,7 +26,7 @@ client.unfocused        $bg $bg $fg $bg $bg
 client.urgent           $bg $bg $fg $bg $bg
 client.placeholder      $bg $bg $fg $bg $bg
 
-client.background       $bg
+# client.background       $bg
 
 
 # Bind mod key to windows key (Mod1 to change to alt)
@@ -39,28 +39,28 @@ font pango:FiraCode Nerd Font Mono 14
 new_window 1pixel
 
 # run status bar
-bar {
-    font pango:FiraCode Nerd Font Mono 14
-    # start i3blocks
-    status_command i3blocks
-    
-    # change to position to top of screen
-    position top
-
-    # remove numbering of workspaces
-    strip_workspace_numbers yes
-
-    # set bar colours
-    colors {
-       background $bg
-       statusline $fg
-       separator $fg
-       focused_workspace  $fg $fg $bg
-       active_workspace   $fg $fg $bg
-       inactive_workspace $bg $bg $fg
-       urgent_workspace   $fg $alert $bg
-    }
-}
+# bar {
+#     font pango:FiraCode Nerd Font Mono 14
+#     # start i3blocks
+#     status_command i3blocks
+#     
+#     # change to position to top of screen
+#     position top
+# 
+#     # remove numbering of workspaces
+#     strip_workspace_numbers yes
+# 
+#     # set bar colours
+#     colors {
+#        background $bg
+#        statusline $fg
+#        separator $fg
+#        focused_workspace  $fg $fg $bg
+#        active_workspace   $fg $fg $bg
+#        inactive_workspace $bg $bg $fg
+#        urgent_workspace   $fg $alert $bg
+#     }
+# }
 
 default_border pixel 3
 
@@ -184,4 +184,5 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Oh you wanna exit huh?' -B '
 
 
 # Launch applications on login
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec nm-applet
