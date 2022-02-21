@@ -37,12 +37,12 @@ configuration {
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	filter: ;*/
-	dpi: 200;
+	dpi: 150;
 /*	threads: 0;*/
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
-	theme: "~/.cache/wal/colors-rofi-dark.rasi";
+/*     theme "~/.config/wal/colors-rofi-dark.rasi"; */
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	matching-negate-char: '-' /* unsupported */;*/
@@ -145,3 +145,5 @@ configuration {
       sorting-method:    "name";
   }
 }
+@theme "/usr/share/rofi/themes/Monokai.rasi"
+/* @theme "~/.config/wal/colors-rofi-dark.rasi" */
