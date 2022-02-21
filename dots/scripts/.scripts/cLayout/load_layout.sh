@@ -4,6 +4,6 @@
 i3-msg "workspace 2:C; append_layout ~/.config/i3/workspace_2.json"
 
 # fill containers with programs
-(alacritty --working-directory ~/programming  &)
-(alacritty --working-directory ~/programming  &)
-(alacritty --working-directory ~/programming  &)
+(alacritty --working-directory ~/Documents/Programming  &)
+(alacritty --working-directory ~/Documents/Programming  &)
+(alacritty --working-directory ~/Documents/Programming  &)
