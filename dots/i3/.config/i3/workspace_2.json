@@ -15,7 +15,7 @@
        {
         "class": "^Alacritty$",
         "instance": "^Alacritty$",
-        "title": "^waves\\@zada\\:\\~\\/programming$"
+        "title": "^waves\\@zada\\:\\~\\/Documents\\/Programming$"
        }
     ],
     "type": "con"
@@ -46,7 +46,7 @@
                {
                 "class": "^Alacritty$",
                 "instance": "^Alacritty$",
-                "title": "^waves\\@zada\\:\\~\\/programming$"
+                "title": "^waves\\@zada\\:\\~\\/Documents\\/Programming$"
                }
             ],
             "type": "con"
@@ -68,10 +68,11 @@
                {
                 "class": "^Alacritty$",
                 "instance": "^Alacritty$",
-                "title": "^waves\\@zada\\:\\~\\/programming$"
+                "title": "^waves\\@zada\\:\\~\\/Documents\\/Programming$"
                }
             ],
             "type": "con"
         }
     ]
 }
+
