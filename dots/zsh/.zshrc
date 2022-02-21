@@ -22,7 +22,7 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
 # OMZ stuff
 
     # If you come from bash you might have to change your $PATH.
-    export PATH=/opt/jdk11/bin:$HOME/bin:/usr/local/bin:$PATH:/home/waves/.local/bin:/usr/bin
+    export PATH=/home/waves/.nimble/bin:/opt/jdk11/bin:$HOME/bin:/usr/local/bin:$PATH:/home/waves/.local/bin:/usr/bin
 
     # Path to your oh-my-zsh installation.
     export ZSH="/home/waves/.oh-my-zsh"
@@ -44,6 +44,11 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
 
     # Aliases
     test -f ~/.bash_aliases && source ~/.bash_aliases
+
+    # Python virtual env stuff
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/projects
+    source /home/waves/.local/bin/virtualenvwrapper.sh
 
 export LANG=en_US.UTF-8
 

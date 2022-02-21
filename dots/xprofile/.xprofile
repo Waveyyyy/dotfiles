@@ -15,6 +15,9 @@ wal -i $(cat ~/.cache/wal/wal)
 # Source .Xresources
 xrdb -merge ~/.Xresources
 
+# Source wal .colors.Xresources
+xrdb ~/.cache/wal/colors.Xresources
+
 # Hide cursor if typing / idle
 unclutter -grab -keystroke &
 
@@ -24,5 +27,9 @@ picom -b
 # Start the notification daemon
 dunst &
 
+# Start the audo daemon
+pipewire &
+pipewire-pulse &
+
 # Change keyboard conf
-setxkbmap gb -model colemak
+setxkbmap gb basic

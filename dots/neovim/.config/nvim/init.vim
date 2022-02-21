@@ -3,7 +3,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
-" Plugin specific configs
+" Config for specific plugins
 source $HOME/.config/nvim/modules/airline.vim
 source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/vim-which-key.vim
@@ -15,6 +15,6 @@ source $HOME/.config/nvim/modules/limelight.vim
 " Load all plugins
 source $HOME/.config/nvim/plugs/plugins.vim
 
-" Configs that need to be sourced after plugins are loaded
+" Load configs that need to be sourced after plugins
 source $HOME/.config/nvim/modules/vim-monokai-pro.vim
 source $HOME/.config/nvim/modules/nvim-colorizer.vim
