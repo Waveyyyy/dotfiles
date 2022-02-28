@@ -22,7 +22,7 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
 # OMZ stuff
 
     # If you come from bash you might have to change your $PATH.
-    export PATH=/home/waves/.nimble/bin:/opt/jdk11/bin:$HOME/bin:/usr/local/bin:$PATH:/home/waves/.local/bin:/usr/bin
+    export PATH=$HOME/.nimble/bin:/opt/jdk11/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.local/bin:/usr/bin:$HOME/.fzf/bin:$HOME/.local/bin:/usr/bin
 
     # Path to your oh-my-zsh installation.
     export ZSH="/home/waves/.oh-my-zsh"
