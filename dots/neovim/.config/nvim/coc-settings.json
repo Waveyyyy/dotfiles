@@ -1,0 +1,19 @@
+{
+  "python.linting.pylintEnabled": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${env:HOME}/.local/bin/black",
+  
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnTypeFiletypes": ["python"],
+  "coc.preferences.messageLevel": "error",
+
+  "languageserver":{
+    "nim": {
+      "command": "nimlsp",
+      "filetypes": ["nim"]
+    }
+  },
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+
+}
+

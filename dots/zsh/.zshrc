@@ -51,5 +51,7 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
     source /home/waves/.local/bin/virtualenvwrapper.sh
 
 export LANG=en_US.UTF-8
+export TZ=Europe/London
+export HARDWARECLOCK=localtime
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

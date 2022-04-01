@@ -13,6 +13,9 @@ alias trilium='trilium >/dev/null 2>&1 &'
 # set term value for ssh, stops 'unknown term type alacritty'
 alias ssh='TERM=xterm-256color ssh'
 
+# Create compile_commands.json using bear
+alias projSetup='make clean && bear -- make'
+
 # functions for making my life easier
 
 function home {
