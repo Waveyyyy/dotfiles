@@ -1,11 +1,15 @@
 {
+  "coc.source.file.ignoreHidden": false,
+  "coc.preferences.colorSupport": false,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": ["python"],
+  "coc.preferences.messageLevel": "error",
+
+
   "python.linting.pylintEnabled": false,
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "${env:HOME}/.local/bin/black",
   
-  "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnTypeFiletypes": ["python"],
-  "coc.preferences.messageLevel": "error",
 
   "languageserver":{
     "nim": {

@@ -16,5 +16,5 @@ source $HOME/.config/nvim/modules/limelight.vim
 source $HOME/.config/nvim/plugs/plugins.vim
 
 " Load configs that need to be sourced after plugins
-source $HOME/.config/nvim/modules/vim-monokai-pro.vim
+source $HOME/.config/nvim/modules/themes.vim
 source $HOME/.config/nvim/modules/nvim-colorizer.vim

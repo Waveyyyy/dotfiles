@@ -25,9 +25,9 @@ endif
     call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 
     " Themeing
-    call dein#add('phanviet/vim-monokai-pro')
-
-    " Key-menu popup
+"    call dein#add('phanviet/vim-monokai-pro')
+    call dein#add('folke/tokyonight.nvim')
+" Key-menu popup
     call dein#add('liuchengxu/vim-which-key')
 
     " Better syntax support
