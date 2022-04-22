@@ -21,8 +21,8 @@ xrdb ~/.cache/wal/colors.Xresources
 # Hide cursor if typing / idle
 unclutter -grab -keystroke &
 
-# Start compositor (makes windows transparent)
-picom -b
+# sync with googles ntp server
+ntpdate time.google.com
 
 # Start the notification daemon
 dunst &
