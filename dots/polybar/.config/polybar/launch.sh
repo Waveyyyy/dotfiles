@@ -8,4 +8,4 @@ pkill polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # polybar example &
-polybar mybar &
+polybar main --config=/home/waves/.config/polybar/config &
