@@ -5,18 +5,18 @@
 #\  /\  / (_| |\ V /  __/\__ \__ \  _ / /\__ \ | | | | | (__ 
 # \/  \/ \__,_| \_/ \___||___/___/ (_)___|___/_| |_|_|  \___|
                                                             
-
+### Removed because using tokyonight theme for kitty
 # Set colours based on wallpaper
-(/usr/bin/cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+# (/usr/bin/cat ~/.cache/wal/sequences &)
+# source ~/.cache/wal/colors-tty.sh
 
 
 # Enable colours
-autoload -U colors && colors
+# autoload -U colors && colors
 
 
 # Set prompt
-export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{white}]$ '
+# export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{white}]$ '
 
 
 # OMZ stuff
@@ -25,9 +25,10 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
     export PATH=$HOME/.nimble/bin:/opt/jdk11/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.local/bin:/usr/bin:$HOME/.fzf/bin:$HOME/.local/bin:/usr/bin
 
     # Path to your oh-my-zsh installation.
-    export ZSH="/home/waves/.oh-my-zsh"
-    ZSH_THEME="robbyrussell"
+    export ZSH="$HOME/.oh-my-zsh"
+    ZSH_THEME="agnoster"
 
+    zstyle ':omz:update' mode reminder
 
     plugins=(
         git
@@ -37,6 +38,7 @@ export PROMPT='[%F{magenta}%n%F{yellow}@%F{magenta}%M%F{white}:%F{cyan}%1~%F{whi
         gitignore
         sudo
         dirhistory
+        fzf-zsh-plugin
     )
 
 
@@ -54,4 +56,15 @@ export LANG=en_US.UTF-8
 export TZ=Europe/London
 export HARDWARECLOCK=localtime
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='nvim'
+else
+    export EDITOR='nvim'
+fi
+
+# fzf plugin stuff
+export FZF_PREVIEW_ADVANCED=true
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+
+export PATH=$PATH:/home/waves/.spicetify
