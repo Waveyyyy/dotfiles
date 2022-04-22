@@ -33,8 +33,9 @@ endif
     " Better syntax support
     call dein#add('sheerun/vim-polyglot')
 
-    " Powerline
+    " Statusline
     call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline-themes')
 
     " File Explorer
     call dein#add('scrooloose/NERDTree')
