@@ -161,3 +161,27 @@
         set colorcolumn=80
         highlight ColorColumn ctermbg=9
     endif
+
+ " hex editing
+    " bind command for calling hex mode function
+    command -bar Hexmode call ToggleHex()
+    
+    " hex editing toggle function
+    function ToggleHex()
+        if !exists("b:editingHex") || !b:editingHex
+            " set status
+            let b:editingHex=1
+            " switch to hex editor
+            %!xxd
+        else
+            " set status
+            let b:editingHex=0
+            " switch to hex editor
+            %!xxd -r
+        endif
+    endfunction
+    
+    " bind ctrl+B to toggle hex mode in 
+    nnoremap <C-B> :Hexmode<CR>
+    inoremap <C-B> <Esc>:Hexmode<CR>
+    vnoremap <C-B> :<C-U>Hexmode<CR>

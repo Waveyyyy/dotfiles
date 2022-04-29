@@ -2,9 +2,11 @@
   "coc.source.file.ignoreHidden": false,
   "coc.preferences.colorSupport": false,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["python", "c++"],
+  "coc.preferences.formatOnSaveFiletypes": ["python", "c++", "rust"],
   "coc.preferences.messageLevel": "error",
 
+  "rust-client.updateOnStartup": true,
+  "rust.build_on_save": true,
 
   "python.linting.pylintEnabled": false,
   "python.formatting.provider": "black",
