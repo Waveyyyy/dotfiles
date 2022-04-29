@@ -9,8 +9,8 @@
 # i3 config file 
 #
 
-# Define $mod key
-set $mod Mod4
+# Define $mod key 
+set $mod Mod4 
 
 # Define movement keys
 set $up k
@@ -53,6 +53,8 @@ bindsym $mod+P exec /home/waves/.config/rofi/rofi-power.sh
 bindsym $mod+Shift+r restart
 # Reload config
 bindsym $mod+Shift+c reload
+# Exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'yes pls' 'i3-msg exit'"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -124,8 +126,8 @@ exec_always --no-startup-id sh $HOME/.config/polybar/launch.sh --blocks
 # Application shortcuts
 
 # Take screenshots, save and copy to clipboard
-bindsym --release $mod+s exec scrot -s -f -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
-bindsym --release $mod+Shift-s exec scrot -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
+bindsym --release $mod+Print exec scrot -s -f -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
+bindsym --release $mod+Shift-Print exec scrot -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
 
 # Audio
 bindsym F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
