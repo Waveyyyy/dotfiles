@@ -22,7 +22,7 @@
 # OMZ stuff
 
     # If you come from bash you might have to change your $PATH.
-    export PATH=$HOME/.nimble/bin:/opt/jdk11/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.local/bin:/usr/bin:$HOME/.fzf/bin:$HOME/.local/bin:/usr/bin
+    export PATH=$HOME/.nimble/bin:/opt/jdk11/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.local/bin:/usr/bin:$HOME/.fzf/bin:$HOME/.local/bin:/usr/bin:/opt
 
     # Path to your oh-my-zsh installation.
     export ZSH="$HOME/.oh-my-zsh"
@@ -61,6 +61,11 @@ if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='nvim'
 else
     export EDITOR='nvim'
+fi
+
+# Load profile file
+if [ -f ~/.profile ]; then
+    . ~/.profile
 fi
 
 # fzf plugin stuff

@@ -119,6 +119,9 @@ assign [class="Discord"] 10
 # Polybar
 exec_always --no-startup-id sh $HOME/.config/polybar/launch.sh --blocks
 
+# Battery notification script
+exec_always --no-startup-id sh $HOME/.scripts/battery_notif/batNotif.sh
+
 # Network manager applet
 # exec --no-startup-id nm-applet
 
