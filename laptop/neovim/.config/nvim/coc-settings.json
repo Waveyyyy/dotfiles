@@ -1,0 +1,26 @@
+{
+  "coc.source.file.ignoreHidden": false,
+  "coc.preferences.colorSupport": false,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": ["python", "c++"/*, "rust"*/],
+  "coc.preferences.messageLevel": "error",
+
+//   "rust-client.updateOnStartup": true,
+//   "rust.build_on_save": true,
+//   "rust-client.rustupPath": "/home/waves/.cargo/bin/rustup",
+
+  "python.linting.pylintEnabled": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${env:HOME}/.local/bin/black",
+  
+
+  "languageserver":{
+    "nim": {
+      "command": "nimlsp",
+      "filetypes": ["nim"]
+    }
+  },
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+
+}
+
