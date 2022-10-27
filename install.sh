@@ -26,7 +26,8 @@ cd "$(dirname "$0")"
 #### Template End
 
 
-options=($(ls | rg -v "\."))
+# original code: options=($(ls | rg -v "\."))
+mapfile -t options <  <(ls | rg -v "\.")
 
 function list_options() {
 	printf "Available options:\n"
@@ -44,6 +45,6 @@ elif [[ ! " ${options[*]} " =~ " ${1} " ]]; then
 	list_options
 	exit 2
 else 
-	stow -t ~/ -d "$1" $(ls "$1")
+	stow -t ~/ -d "$1" "$(ls "$1")"
 fi
 
