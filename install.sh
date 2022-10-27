@@ -45,6 +45,6 @@ elif [[ ! " ${options[*]} " =~ " ${1} " ]]; then
 	list_options
 	exit 2
 else 
-	stow -t ~/ -d "$1" "$(ls "$1")"
+	stow -t ~/ -d "$1" $(ls "$1")
 fi
 
