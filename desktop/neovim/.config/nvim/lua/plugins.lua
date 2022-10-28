@@ -61,7 +61,8 @@ packer.startup(function(use)
     use "airblade/vim-gitgutter"
 
     -- colorscheme
-    use { "navarasu/onedark.nvim" }
+    use { "ellisonleao/gruvbox.nvim" }
+--    use { "navarasu/onedark.nvim" }
     use "norcalli/nvim-colorizer.lua"
 
     -- autocompletion
