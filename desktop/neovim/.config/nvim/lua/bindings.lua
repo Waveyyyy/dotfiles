@@ -2,9 +2,9 @@
 -- Link: https://www.reddit.com/r/neovim/comments/umnc45/comment/i82qc0z/?utm_source=share&utm_medium=web2x&context=3
 local function map(mode, lhs, rhs, opts)
     local options = { noremap = false }
-        if opts then
-            options = vim.tbl_extend('force', options, opts)
-        end
+    if opts then
+        options = vim.tbl_extend('force', options, opts)
+    end
     -- above code allows for opts to be quite literally optional
     -- if opts is not provided then options will contain only
     -- { noremap = false }
@@ -28,8 +28,8 @@ end
 vim.g.mapleader = ' '
 
 
--- Navigate tabs 
--- tabfwd: Tab 
+-- Navigate tabs
+-- tabfwd: Tab
 -- tabbck: Shift-Tab
 map('n', '<Tab>', ':tabn<CR>')
 map('n', '<S-Tab>', ':tabp<CR>', { silent = true })
@@ -44,7 +44,7 @@ map('n', '<C-F>', 'za', { noremap = true })
 
 -- QOL
     -- Rebind escape to jf
-    map('i', 'jf', '<esc>', { noremap = true})
+    map('i', 'jf', '<esc>', { noremap = true })
 
     -- Window navigation
     map('n', '<C-H>', '<C-w>h')
@@ -72,11 +72,11 @@ map('n', '<C-F>', 'za', { noremap = true })
     centaur('gk')
 
 
--- Bind ctrl+B to toggle hex editing mode 
+-- Bind ctrl+B to toggle hex editing mode
 -- From @Sam1ser, link: https://github.com/Samiser/dotfiles/blob/master/dots/vim/.vimrc
-map('n', '<C-B>', ':Hexmode<CR>', { noremap = true})
-map('i', '<C-B>', '<Esc>:Hexmode<CR>', { noremap = true})
-map('v', '<C-B>', '<C-U>:Hexmode<CR>', { noremap = true})
+map('n', '<C-B>', ':Hexmode<CR>', { noremap = true })
+map('i', '<C-B>', '<Esc>:Hexmode<CR>', { noremap = true })
+map('v', '<C-B>', '<C-U>:Hexmode<CR>', { noremap = true })
 
 
 -- Auto commands
@@ -85,17 +85,17 @@ map('v', '<C-B>', '<C-U>:Hexmode<CR>', { noremap = true})
     vim.api.nvim_create_autocmd({ 'VimEnter' },
         {
             pattern = { '*' },
-            callback = function ()
+            callback = function()
                 map('n', '<C-h>', ':noh<CR>', { noremap = true })
             end
         }
     )
 
-    vim.api.nvim_create_autocmd({ 'BufWritePost'  },
+    vim.api.nvim_create_autocmd({ 'BufWritePost' },
         {
             pattern = { '*' },
-            callback = function ()
-               vim.lsp.buf.formatting()
+            callback = function()
+                vim.lsp.buf.format { async = true }
             end
         }
     )
