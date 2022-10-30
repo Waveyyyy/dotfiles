@@ -59,7 +59,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # Set each display to its own workspace
 workspace 1 output DP-0
-workspace 2 output HDMI-0
+workspace 6 output HDMI-0
 
 # Run rofi  
 bindsym $mod+d exec --no-startup-id rofi -no-config -no-lazy-grab -show drun -modi drun -fullscreen 
