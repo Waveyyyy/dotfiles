@@ -136,7 +136,7 @@ assign [class="firefox"] 8
 
 # Take screenshots, save and copy to clipboard
 bindsym --release $mod+Sys_Req exec scrot -s -f -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
-bindsym --release $mod+Shift-Sys_Req exec scrot -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
+bindsym --release $mod+Shift+Sys_Req exec scrot -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
 
 # Open browser
 bindsym $mod+w exec firefox-dev
