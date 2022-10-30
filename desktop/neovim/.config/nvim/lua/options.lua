@@ -38,7 +38,7 @@ set.backup = false
 set.writebackup = false
 set.swapfile = false
 -- change undodir location undodir etc.
-set.undodir = vim.fn.expand('~') .. '.cache/nvim/undo'
+set.undodir = vim.fn.expand('~') .. '/.cache/nvim/undo'
 set.undofile = true
 
 -- make searching enjoyable
