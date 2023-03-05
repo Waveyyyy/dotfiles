@@ -23,6 +23,8 @@ while true; do
             old_bat_percent=$bat_percent
             sleep_len="2m"
         fi
+    else
+        old_bat_percent=$bat_percent
     fi
 
     /usr/bin/sleep `echo $sleep_len`

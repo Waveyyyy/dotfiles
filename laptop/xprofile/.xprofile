@@ -22,7 +22,7 @@ xrdb ~/.cache/wal/colors.Xresources
 unclutter -grab -keystroke &
 
 # sync with googles ntp server
-ntpdate time.google.com
+ntpdate -bu time.google.com
 
 # Start the notification daemon
 dunst &
