@@ -62,7 +62,7 @@ font-1 = unifont:fontformat=truetype:size=14:antialias=false;0
 font-2 = siji:pixelsize=14;1
 
 
-modules-left = i3 filesystem
+modules-left = i3 # filesystem
 modules-right = backlight pulseaudio memory cpu battery wlan eth temperature date
 
 cursor-click = pointer
@@ -76,15 +76,15 @@ label-open = ​
 type = internal/xwindow
 label = %title:0:30:...%
 
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{colors.primary}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+# [module/filesystem]
+# type = internal/fs
+# interval = 25
+# 
+# mount-0 = /
+# 
+# label-mounted = %mountpoint%%{F-}: %percentage_used%%
+# label-unmounted = %mountpoint% not mounted
+# label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
