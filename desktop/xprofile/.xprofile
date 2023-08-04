@@ -7,10 +7,6 @@ feh --bg-fill /home/callum/Pictures/wallpapers/cool_scenery.png /home/callum/Pic
 # Source .Xresources
 xrdb -merge ~/.Xresources
 
-# Start the audio daemon
-pipewire &
-pipewire-pulse &
-
 # Start compositor
 picom -b --config ~/.config/picom/picom.conf
 
