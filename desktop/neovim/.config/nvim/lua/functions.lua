@@ -5,10 +5,10 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' },
         pattern = { '*.md', '*.c', '*.h', '*.cpp', '*.hpp' },
         callback = function ()
             local lset = vim.opt_local
-            lset.textwidth = { 80 }
-            lset.wrapmargin = { 0 }
+            lset.textwidth =  80
+            lset.wrapmargin =  0
             lset.formatoptions:append('t')
-            lset.linebreak = { true }
+            lset.linebreak = true
         end
     }
 )
