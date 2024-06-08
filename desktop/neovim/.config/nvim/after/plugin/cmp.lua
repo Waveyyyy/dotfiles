@@ -1,3 +1,9 @@
+vim.opt.completeopt = {
+    "menu",
+    "menuone",
+    "noselect"
+}
+
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 
@@ -52,9 +58,10 @@ cmp.setup({
         },
     },
     mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-j>"] = cmp.mapping.scroll_docs(4),
-        ["<C-e>"] = cmp.mapping.abort(),
+        ["<C-e>"] = cmp.mapping({
+            i = cmp.mapping.abort(),
+            c = cmp.mapping.close(),
+        }),
         ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true
@@ -115,45 +122,11 @@ cmp.setup({
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
   sources = cmp.config.sources({
-    { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+    { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you installed it.
   }, {
     { name = 'buffer' },
   })
 })
 
--- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline({ '/', '?' }, {
-  mapping = cmp.mapping.preset.cmdline(),
-  sources = {
-    { name = 'buffer' }
-  }
-})
-
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline(),
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
-  })
-})
-
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['jedi_language_server'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['clangd'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['bashls'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['jsonls'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['cmake'].setup {
-    capabilities = capabilities
-}
+-- Set up lspconfig, add to file where lsps are loaded
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
