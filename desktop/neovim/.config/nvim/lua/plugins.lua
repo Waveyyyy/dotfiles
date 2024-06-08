@@ -49,12 +49,20 @@ packer.startup(function(use)
         requires = { "rbgrouleff/bclose.vim" }
     }
 
-    -- lsp config
-    use { "neovim/nvim-lspconfig", tag = "v0.1.3" }
-    use "junnplus/lsp-setup.nvim"
-    use "williamboman/mason.nvim"
-    use "williamboman/mason-lspconfig.nvim"
-    use "folke/neodev.nvim"
+    -- native lsp config
+    use {
+        "neovim/nvim-lspconfig",
+    }
+   use {
+        "hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-path",
+        -- "hrsh7th/cmp-cmdline",
+        -- snippet
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
+    }
 
     -- git
     use "tpope/vim-fugitive"
