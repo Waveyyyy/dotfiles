@@ -162,6 +162,9 @@ gaps outer 10
 # exec killall picom && 
 # exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
+# Add keys to SSH-Agent on startp
+exec_always ~/.scripts/gnome-keyring.sh
+
 
 # Window colour settings
 # client.focused          #565f89 #565f89 #565f89 #565f89
