@@ -84,27 +84,16 @@ packer.startup(function(use)
 
     -- colorscheme
     use { "ellisonleao/gruvbox.nvim" }
---    use { "navarasu/onedark.nvim" }
     use "norcalli/nvim-colorizer.lua"
-
-    -- autocompletion
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-nvim-lsp"
-    use "hrsh7th/cmp-buffer"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-cmdline"
-    use "saadparwaiz1/cmp_luasnip"
 
     -- QOL
     use "scrooloose/nerdcommenter"
     --    use "jiangmiao/auto-pairs"
 
-    -- snippet
-    use "L3MON4D3/LuaSnip"
-
     -- symbol
     use "simrat39/symbols-outline.nvim"
     use "ryanoasis/vim-devicons"
+    use "kyazdani42/nvim-web-devicons"
     use "tiagofumo/vim-nerdtree-syntax-highlight"
 
     -- statusbar
@@ -114,7 +103,7 @@ packer.startup(function(use)
     }
 
     -- bufferline
-    use { "akinsho/nvim-bufferline.lua", tag = "v2.7.0" }
+    use "akinsho/nvim-bufferline.lua"
     use "vim-scripts/BufOnly.vim"
 
     -- treesitter
