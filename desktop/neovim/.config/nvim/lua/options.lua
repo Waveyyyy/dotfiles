@@ -1,9 +1,6 @@
 -- :h vim-differences to see differences between vim defaults and nvim
 local set = vim.opt
 
--- syntax highlighting???? TODO: check what this does
-set.omnifunc = 'syntaxcomplete#Complete'
-
 -- Relative numbers
 set.number = true
 set.relativenumber = true
@@ -20,7 +17,7 @@ set.wildignorecase = true
 set.completeopt = 'preview'
 set.wildmode = { 'longest','list','full' }
 
--- tabs TODO: lookup what each of these does
+-- tabs
 set.expandtab = true
 set.tabstop = 4
 set.softtabstop = 4
