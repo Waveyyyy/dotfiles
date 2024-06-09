@@ -130,7 +130,7 @@ bindsym $mod+a focus parent
 
 
 # Assign programs to workspaces
-assign [class="firefox"] 8
+assign [class="Firefox"] 2
 
 # Startup applications
 
@@ -141,7 +141,7 @@ bindsym --release $mod+Sys_Req exec scrot -s -f -e 'mv $f ~/Pictures/screenshots
 bindsym --release $mod+Shift+Sys_Req exec scrot -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
 
 # Open browser
-bindsym $mod+w exec firefox-dev
+bindsym $mod+w exec Firefox
 
 # Terminal
 bindsym $mod+y exec --no-startup-id kitty;focus
