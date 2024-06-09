@@ -100,3 +100,42 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' },
     end
   }
 )
+
+--------------------------------------------------------------------------------
+----------------------------------Telescope-------------------------------------
+--------------------------------------------------------------------------------
+
+-- setting buffer to zero will cause issues when switching files with find_files
+local bufopts = { noremap = true }
+
+vim.keymap.set('n', '<leader>fc', function()
+  -- search current file using Telescope in ascending order with the ivy theme
+  local opt = require('telescope.themes').get_ivy({ sorting_strategy = "ascending" })
+  require('telescope.builtin').current_buffer_fuzzy_find(opt)
+end, bufopts)
+
+vim.keymap.set('n', '<leader>nh', function()
+  -- search the all of the neovim help files using telescope
+  local opt = require('telescope.themes').get_ivy({ sorting_strategy = "ascending" })
+  require('telescope.builtin').help_tags(opt)
+end, bufopts)
+
+vim.keymap.set('n', '<leader>km', function()
+  require('telescope.builtin').keymaps()
+end, bufopts)
+
+vim.keymap.set('n', '<leader>td', function()
+  local opt = require('telescope.themes').get_dropdown({ sorting_strategy = "ascending", width = 80 })
+  require('telescope.builtin').diagnostics(opt)
+end, bufopts)
+
+vim.keymap.set('n', '<leader>fd', function()
+  local opt = { hidden = true }
+  require('telescope.builtin').find_files(opt)
+end, bufopts)
+
+vim.keymap.set('n', '<leader>ff', function()
+  local opt = { hidden = true, cwd = '~' }
+  require('telescope.builtin').find_files(opt)
+end, bufopts)
+
