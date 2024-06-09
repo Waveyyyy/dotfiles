@@ -10,4 +10,5 @@ xrdb -merge ~/.Xresources
 # Start compositor
 picom -b --config ~/.config/picom/picom.conf
 
+pipewire &
 eval $(gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh | sed 's/^(.*)/export\1/g')
