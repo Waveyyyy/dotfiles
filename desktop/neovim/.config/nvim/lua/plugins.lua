@@ -45,8 +45,8 @@ packer.startup(function(use)
 
     -- ranger file explorer
     use {
-        "francoiscabrol/ranger.vim",
-        requires = { "rbgrouleff/bclose.vim" }
+        "kelly-lin/ranger.nvim",
+        "rbgrouleff/bclose.vim",
     }
 
     -- native lsp config
