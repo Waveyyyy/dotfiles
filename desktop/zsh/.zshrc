@@ -44,6 +44,8 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-fzf-history-search
+    virtualenvwrapper # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper
     gitignore
     sudo
     )
@@ -74,9 +76,12 @@ if [ -f ~/.profile ]; then
     . ~/.profile
 fi
 
-# fzf plugin stuff
-export FZF_PREVIEW_ADVANCED=true
+# to view files WITHIN archives use `less archive:file_in_archive`
+# to extract files from archvies use `less archive:file_in_archive > extracted`
+# same works for files in archives within archives up to a depth of 6
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+# enables syntax highlighting, can be disabled by adding a trailing colon to filename
+export LESS="-R"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
