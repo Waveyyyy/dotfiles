@@ -53,6 +53,20 @@ packer.startup(function(use)
     use {
         "neovim/nvim-lspconfig",
     }
+
+    -- telescope
+    use {
+        "nvim-telescope/telescope.nvim", tag = '0.1.x',
+        requires = { {"nvim-lua/plenary.nvim", "burntsushi/ripgrep"} },
+    }
+    use { 'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
+        requires = { {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
+    }
+    use { "nvim-telescope/telescope-file-browser.nvim",
+        requires = { {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
+    }
+
    use {
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
