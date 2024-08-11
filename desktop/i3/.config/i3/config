@@ -10,6 +10,7 @@
 
 # Define $mod key 
 set $mod Mod1 
+set $mod1 Mod4
 
 # Define movement keys
 set $up k
@@ -130,7 +131,7 @@ bindsym $mod+a focus parent
 
 
 # Assign programs to workspaces
-assign [class="Firefox"] 2
+assign [class="firefox"] 2
 
 # Startup applications
 
@@ -141,13 +142,13 @@ bindsym --release $mod+Sys_Req exec scrot -s -f -e 'mv $f ~/Pictures/screenshots
 bindsym --release $mod+Shift+Sys_Req exec scrot -e 'mv $f ~/Pictures/screenshots/ && xclip -sel c -t image/png -i ~/Pictures/screenshots/$f'
 
 # Open browser
-bindsym $mod+w exec Firefox
+bindsym $mod+w exec firefox
 
 # Terminal
 bindsym $mod+y exec --no-startup-id kitty;focus
 
 # i3lock to lock the screen
-# bindsym mod1+l exec i3lock-fancy
+bindsym $mod1+l exec i3lock-fancy -t
 
 # remove borders
 for_window [class="^.*"] border pixel 0
