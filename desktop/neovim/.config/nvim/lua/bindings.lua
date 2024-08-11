@@ -35,8 +35,8 @@ map('n', '<Tab>', ':tabn<CR>')
 map('n', '<S-Tab>', ':tabp<CR>', { silent = true })
 
 -- Removes need to escape chars for regex in search mode
-map('n', '/', '/\v', { noremap = true })
-map('v', '/', '/\v', { noremap = true })
+map('n', '/', '/\\v', { noremap = true })
+map('v', '/', '/\\v', { noremap = true })
 
 
 -- fold using ctrl-f instead of za
