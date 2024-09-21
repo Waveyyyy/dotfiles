@@ -31,12 +31,12 @@ vim.g.mapleader = ' '
 -- Navigate tabs
 -- tabfwd: Tab
 -- tabbck: Shift-Tab
-map('n', '<Tab>', ':tabn<CR>')
-map('n', '<S-Tab>', ':tabp<CR>', { silent = true })
+map('n', '<Tab>', ':tabn<CR>', { desc = "Navigate forward through tabs" })
+map('n', '<S-Tab>', ':tabp<CR>', { silent = true, desc = "Navigate backwards through tabs" })
 
 -- Removes need to escape chars for regex in search mode
-map('n', '/', '/\\v', { noremap = true })
-map('v', '/', '/\\v', { noremap = true })
+map('n', '/', '/\\v', { noremap = true, desc = "[normal] Removes need to escape chars for regex in search mode" })
+map('v', '/', '/\\v', { noremap = true, desc = "[visual] Removes need to escape chars for regex in search mode" })
 
 
 -- fold using ctrl-f instead of za
@@ -57,7 +57,7 @@ map('n', '<C-N>', ':bn<CR>', { silent = true })
 map('n', '<C-P>', ':bp<CR>', { silent = true })
 
 -- Add blank lines without leaving normal mode
-map('n', '<leader><Return>', ':put _<CR>', { noremap = true })
+map('n', '<leader><Return>', ':put _<CR>', { noremap = true, desc = "Add blank lines without leaving normal mode" })
 
 -- Centre crosshair on movement
 centaur('<C-U>', '11k')
@@ -74,9 +74,9 @@ centaur('gk')
 
 -- Bind ctrl+B to toggle hex editing mode
 -- From @Sam1ser, link: https://github.com/Samiser/dotfiles/blob/master/dots/vim/.vimrc
-map('n', '<C-B>', ':Hexmode<CR>', { noremap = true })
-map('i', '<C-B>', '<Esc>:Hexmode<CR>', { noremap = true })
-map('v', '<C-B>', '<C-U>:Hexmode<CR>', { noremap = true })
+map('n', '<C-B>', ':Hexmode<CR>', { noremap = true, desc = "[normal] Converts the current buffer to/from hex" })
+map('i', '<C-B>', '<Esc>:Hexmode<CR>', { noremap = true, desc = "[insert] Converts the current buffer to/from hex" })
+map('v', '<C-B>', '<C-U>:Hexmode<CR>', { noremap = true, desc = "[visual] Converts the current buffer to/from hex" })
 --------------------------------------------------------------------------------
 ---------------------------------Auto commands----------------------------------
 --------------------------------------------------------------------------------
@@ -86,7 +86,8 @@ vim.api.nvim_create_autocmd({ 'VimEnter' },
   {
     pattern = { '*' },
     callback = function()
-      map('n', '<C-h>', ':noh<CR>', { noremap = true })
+      map('n', '<C-h>', ':noh<CR>',
+        { noremap = true, desc = "Remove highlight with ctrl-h when done viewing search results" })
     end
   }
 )
@@ -106,36 +107,34 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' },
 --------------------------------------------------------------------------------
 
 -- setting buffer to zero will cause issues when switching files with find_files
-local bufopts = { noremap = true }
 
 vim.keymap.set('n', '<leader>fc', function()
   -- search current file using Telescope in ascending order with the ivy theme
   local opt = require('telescope.themes').get_ivy({ sorting_strategy = "ascending" })
   require('telescope.builtin').current_buffer_fuzzy_find(opt)
-end, bufopts)
+end, { noremap = true, desc = "[Telescope] Search the content of the current file" })
 
 vim.keymap.set('n', '<leader>nh', function()
   -- search the all of the neovim help files using telescope
   local opt = require('telescope.themes').get_ivy({ sorting_strategy = "ascending" })
   require('telescope.builtin').help_tags(opt)
-end, bufopts)
+end, { noremap = true, desc = "[Telescope] Search through the neovim help files" })
 
 vim.keymap.set('n', '<leader>km', function()
   require('telescope.builtin').keymaps()
-end, bufopts)
+end, { noremap = true, desc = "[Telescope] Search through all keymaps" })
 
 vim.keymap.set('n', '<leader>td', function()
   local opt = require('telescope.themes').get_dropdown({ sorting_strategy = "ascending", width = 80 })
   require('telescope.builtin').diagnostics(opt)
-end, bufopts)
+end, { noremap = true, desc = "[Telescope] Search the diagnostics in current file" })
 
 vim.keymap.set('n', '<leader>fd', function()
   local opt = { hidden = true }
   require('telescope.builtin').find_files(opt)
-end, bufopts)
+end, { noremap = true, desc = "[Telescope] Search for files in current directory" })
 
 vim.keymap.set('n', '<leader>ff', function()
   local opt = { hidden = true, cwd = '~' }
   require('telescope.builtin').find_files(opt)
-end, bufopts)
-
+end, { noremap = true, desc = "[Telescope] Search for files in the current users home directory" })
