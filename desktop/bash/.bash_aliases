@@ -1,3 +1,4 @@
+alias vim='nvim'
 alias cat='bat' # https://github.com/sharkdp/bat
 alias ls='eza' # https://github.com/eza-community/eza
 
