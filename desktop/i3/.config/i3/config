@@ -49,7 +49,7 @@ font pango:Fira Code Regular Nerd Font Complete Mono 12
 
 # Start i3bar to display a workspace bar 
 bar {
-        status_command i3status
+	status_command i3status # i3blocks
 
 	# set bar colours
 	#colors {
