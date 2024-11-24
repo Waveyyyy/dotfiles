@@ -108,11 +108,11 @@ vim.api.nvim_create_autocmd({ 'BufWritePost' },
 
 -- setting buffer to zero will cause issues when switching files with find_files
 
-vim.keymap.set('n', '<leader>fc', function()
-  -- search current file using Telescope in ascending order with the ivy theme
-  local opt = require('telescope.themes').get_ivy({ sorting_strategy = "ascending" })
-  require('telescope.builtin').current_buffer_fuzzy_find(opt)
-end, { noremap = true, desc = "[Telescope] Search the content of the current file" })
+--vim.keymap.set('n', '<leader>fc', function()
+--  -- search current file using Telescope in ascending order with the ivy theme
+--  local opt = require('telescope.themes').get_ivy({ sorting_strategy = "ascending" })
+--  require('telescope.builtin').current_buffer_fuzzy_find(opt)
+--end, { noremap = true, desc = "[Telescope] Search the content of the current file" })
 
 vim.keymap.set('n', '<leader>nh', function()
   -- search the all of the neovim help files using telescope
@@ -129,12 +129,12 @@ vim.keymap.set('n', '<leader>td', function()
   require('telescope.builtin').diagnostics(opt)
 end, { noremap = true, desc = "[Telescope] Search the diagnostics in current file" })
 
-vim.keymap.set('n', '<leader>fd', function()
-  local opt = { hidden = true }
-  require('telescope.builtin').find_files(opt)
-end, { noremap = true, desc = "[Telescope] Search for files in current directory" })
-
-vim.keymap.set('n', '<leader>ff', function()
-  local opt = { hidden = true, cwd = '~' }
-  require('telescope.builtin').find_files(opt)
-end, { noremap = true, desc = "[Telescope] Search for files in the current users home directory" })
+--vim.keymap.set('n', '<leader>fd', function()
+--  local opt = { hidden = true }
+--  require('telescope.builtin').find_files(opt)
+--end, { noremap = true, desc = "[Telescope] Search for files in current directory" })
+--
+--vim.keymap.set('n', '<leader>ff', function()
+--  local opt = { hidden = true, cwd = '~' }
+--  require('telescope.builtin').find_files(opt)
+--end, { noremap = true, desc = "[Telescope] Search for files in the current users home directory" })

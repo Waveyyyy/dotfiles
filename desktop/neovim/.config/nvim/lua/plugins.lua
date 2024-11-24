@@ -60,15 +60,15 @@ return packer.startup(function(use)
 
     -- telescope
     use {
-        "nvim-telescope/telescope.nvim", tag = '0.1.x',
-        requires = { {"nvim-lua/plenary.nvim", "burntsushi/ripgrep"} },
+        "nvim-telescope/telescope.nvim", tag = '0.1.8',
+        requires = { { "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } },
     }
-    use { 'nvim-telescope/telescope-fzf-native.nvim',
-        run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
-        requires = { {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
-    }
+    --    use { 'nvim-telescope/telescope-fzf-native.nvim',
+    --        run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
+    --        requires = { { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
+    --    }
     use { "nvim-telescope/telescope-file-browser.nvim",
-        requires = { {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
+        requires = { { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
     }
 
    use {
