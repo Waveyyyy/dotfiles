@@ -71,15 +71,25 @@ return packer.startup(function(use)
         requires = { { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "burntsushi/ripgrep" } }
     }
 
-   use {
+    use {
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         -- "hrsh7th/cmp-cmdline",
+        -- lsp icons
+        "onsails/lspkind-nvim",
         -- snippet
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
+    }
+
+    use {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
     }
 
     -- git
@@ -92,7 +102,6 @@ return packer.startup(function(use)
 
     -- QOL
     use "scrooloose/nerdcommenter"
-    --    use "jiangmiao/auto-pairs"
 
     -- symbol
     use "simrat39/symbols-outline.nvim"

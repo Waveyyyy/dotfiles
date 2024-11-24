@@ -8,40 +8,17 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 
 local luasnip = require("luasnip")
-local lsp = require("lspconfig")
+local lspkind = require("lspkind")
+-- local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+-- cmp.event:on(
+--     'confirm_done',
+--     cmp_autopairs.on_confirm_done()
+-- )
 
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
-
-local cmp_kinds = {
-    Text = "",
-    Method = "",
-    Function = "",
-    Constructor = "",
-    Field = "",
-    Variable = "",
-    Class = "ﴯ",
-    Interface = "",
-    Module = "",
-    Property = "ﰠ",
-    Unit = "",
-    Value = "λ",
-    Enum = "",
-    Keyword = "",
-    Snippet = "",
-    Color = "",
-    File = "",
-    Reference = "",
-    Folder = "",
-    EnumMember = "",
-    Constant = "",
-    Struct = "",
-    Event = "",
-    Operator = "",
-    TypeParameter = ""
-}
 
 cmp.setup({
     snippet = {
@@ -102,21 +79,16 @@ cmp.setup({
         }
     }),
     formatting = {
-        fields = { "kind", "abbr", "menu" },
-        format = function(entry, vim_item)
-            vim_item.kind = cmp_kinds[vim_item.kind] or ""
-            local lsp_icon = "🅻"
-            if lsp ~= nil and lsp.ocamllsp ~= nil then
-                lsp_icon = "🐫"
-            end
-            vim_item.menu = ({
-                buffer = "🅱",
-                nvim_lsp = lsp_icon,
-                luasnip = "㊊"
-            })[entry.source.name]
-            return vim_item
-        end,
-    }
+        format = lspkind.cmp_format({
+            mode = "symbol_text",
+            menu = ({
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Lua]",
+            })
+    })
+},
 })
 
 -- Set configuration for specific filetype.
