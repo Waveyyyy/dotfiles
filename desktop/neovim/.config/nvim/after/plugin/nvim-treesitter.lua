@@ -12,7 +12,6 @@ ts.setup {
     },
     ensure_installed = {
         "python",
-        "toml",
         "json",
         "yaml",
         "markdown",
@@ -22,7 +21,6 @@ ts.setup {
         "cpp",
         "bash",
         "cmake",
-        "ocaml",
     },
     sync_install = true,
     autotag = {
