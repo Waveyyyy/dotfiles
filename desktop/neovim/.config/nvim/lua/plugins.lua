@@ -116,13 +116,14 @@ return packer.startup(function(use)
     }
 
     -- bufferline
-    use "akinsho/nvim-bufferline.lua"
-    use "vim-scripts/BufOnly.vim"
+    --    use "akinsho/nvim-bufferline.lua"
+    --    use "vim-scripts/BufOnly.vim"
 
     -- treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
         run = function() require("nvim-treesitter.install").update({ with_sync = true }) end,
+        "nvim-treesitter/nvim-treesitter-context"
     }
     use "sheerun/vim-polyglot"
 
