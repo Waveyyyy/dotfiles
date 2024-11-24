@@ -131,7 +131,7 @@ bindsym $mod+a focus parent
 
 
 # Assign programs to workspaces
-assign [class="firefox"] 2
+assign [class="Firefox"] 2
 
 # Startup applications
 
