@@ -125,7 +125,7 @@ vim.keymap.set('n', '<leader>km', function()
 end, { noremap = true, desc = "[Telescope] Search through all keymaps" })
 
 vim.keymap.set('n', '<leader>td', function()
-  local opt = require('telescope.themes').get_dropdown({ sorting_strategy = "ascending", width = 80 })
+  local opt = require('telescope.themes').get_dropdown({ sorting_strategy = "ascending"})
   require('telescope.builtin').diagnostics(opt)
 end, { noremap = true, desc = "[Telescope] Search the diagnostics in current file" })
 
